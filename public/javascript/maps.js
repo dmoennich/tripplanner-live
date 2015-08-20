@@ -1,35 +1,40 @@
 // maps.js
+var map;
+function initialize_gmaps() {
+  // initialize new google maps LatLng object
+  var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
+  // set the map options hash
+  var mapOptions = {
+    center: myLatlng,
+    zoom: 13,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    styles: styleArr
+  };
+  // get the maps div's HTML obj
+  var map_canvas_obj = document.getElementById("map-canvas");
+  // initialize a new Google Map with the options
+  map = new google.maps.Map(map_canvas_obj, mapOptions);
+  // Add the marker to the map
 
-      function initialize_gmaps() {
-      // initialize new google maps LatLng object
-      var myLatlng = new google.maps.LatLng(40.705189,-74.009209);
-      // set the map options hash
-      var mapOptions = {
-        center: myLatlng,
-        zoom: 13,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles: styleArr
-      };
-      // get the maps div's HTML obj
-      var map_canvas_obj = document.getElementById("map-canvas");
-      // initialize a new Google Map with the options
-      var map = new google.maps.Map(map_canvas_obj, mapOptions);
-      // Add the marker to the map
-      // var marker = new google.maps.Marker({
-      //   position: myLatlng,
-      //   title:"Hello World!"
-      // });
+    // var marker = new google.maps.Marker({
+    //     position: {lat: 40.707119, lng: -74.003602},
+    //     map: map,
+    //     title:"We found a location!"
+    // });
 
       // draw some locations on the map
       // var hotelLocation = [40.705137, -74.007624];
+
       // var restaurantLocations = [
       //   [40.705137, -74.013940],
       //   [40.708475, -74.010846]
       // ];
+
       // var activityLocations = [
       //   [40.716291, -73.995315],
       //   [40.707119, -74.003602]
       // ];
+
       // function drawLocation (location, opts) {
       //   if (typeof opts !== 'object') {
       //     opts = {}
