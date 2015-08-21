@@ -15,7 +15,7 @@
         <div class="panel-body">
           <div>
             <h4>Hotels</h4>
-            <select id="hotels">
+            <select id="hotel">
               {% for hotel in all_hotels %}
               <option>{{ hotel.name }}</option>
               {% endfor %}
@@ -62,7 +62,7 @@
         <div class="panel-body">
           <div>
             <h4>My Hotel</h4>
-            <ul id="currentHotel" class="list-group">
+            <ul id="current_hotel" class="list-group">
 <!--               <div class="itinerary-item">
                 <span class="title">Andaz Wall Street</span>
                 <button class="btn btn-xs btn-danger remove btn-circle">x</button>
@@ -71,7 +71,7 @@
           </div>
           <div>
             <h4>My Restaurants</h4>
-            <ul id="restaurantList" class="list-group">
+            <ul id="current_restaurant" class="list-group">
 <!--               <div class="itinerary-item">
                 <span class="title">Bouley</span>
                 <button class="btn btn-xs btn-danger remove btn-circle">x</button>
@@ -84,7 +84,7 @@
           </div>
           <div>
             <h4>My Activities</h4>
-            <ul id="activityList" class="list-group">
+            <ul id="current_activity" class="list-group">
 <!--               <div class="itinerary-item">
                 <span class="title">Mahayana Buddhist Temple Association</span>
                 <button class="btn btn-xs btn-danger remove btn-circle">x</button>
