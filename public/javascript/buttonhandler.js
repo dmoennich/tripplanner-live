@@ -1,6 +1,7 @@
 // buttonhandler.js
 
 var days = [];
+var currentDayIndex = 0;
 
 var currentDay = {
 	hotel: "",
@@ -127,6 +128,40 @@ var removeMarker = function (markerIdentifier) {
 	currentDay.markers[markerIdentifier].setMap(null);
 	delete currentDay.markers[markerIdentifier];
 };
+
+
+
+$("#add_day").click(function() {
+	addDay(currentDay);
+});
+
+
+function addDay(object) {
+	// add object to array of days
+	days.push(currentDay);
+
+	// create new empty day
+	currentDay.hotel = "";
+	currentDay.restaurant = [];
+	currentDay.activity = [];
+	currentDay.markers = {};
+
+	// increment current day
+	currentDayIndex++;
+
+
+	var newbutton = '<button class="btn btn-circle day-btn">' + currentDayIndex + '</button>'
+	$("#add_day").before('<button class="btn btn-circle day-btn">' + currentDayIndex + '</button>');
+}
+
+
+
+
+
+
+
+
+
 
 
 
